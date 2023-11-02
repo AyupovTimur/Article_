@@ -8,6 +8,7 @@
       "allowJs": true,
       "moduleResolution": "node",
       "baseUrl": ".",
+      "strictNullChecks": false,
       "paths": {
         "*": ["./src/*"] 
       },
@@ -20,7 +21,7 @@
     },
     "ts-node": {
       "compilerOptions": {
-        "module": "CommonJS"
+        "module": "CommonJS",
       }
     }
   }

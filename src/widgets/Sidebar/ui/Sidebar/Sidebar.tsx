@@ -6,24 +6,23 @@ import { LangSwitcher } from 'shared/ui/LangSwitcher/LangSwitcher';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface SidebarProps {
-    className?: string
+  className?: string
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+export const Sidebar = ({ className }: SidebarProps): JSX.Element => {
+  const [collapsed, setCollapsed] = useState(false)
 
-    const [collapsed, setCollapsed] = useState(false);
+  const onToggle = () => {
+    setCollapsed(prev => !prev)
+  }
 
-    const onToggle = () => {
-        setCollapsed(prev => !prev)
-    }
-
-    return (
-        <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
-            <Button style={{display: 'block', margin: '0 auto'}} theme={ButtonTheme.CLEAR} onClick={onToggle}>Открыть</Button>
-            <div className={cls.switchers}>
-                <ThemeSwitcher />
-                <LangSwitcher/>
-            </div>
-        </div>
-    );
-};
+  return (
+      <div className={classNames(cls.sidebar, { [cls.collapsed]: collapsed }, [className])}>
+          <Button style={{ display: 'block', margin: '0 auto' }} theme={ButtonTheme.CLEAR} onClick={onToggle}>Открыть</Button>
+          <div className={cls.switchers}>
+              <ThemeSwitcher />
+              <LangSwitcher/>
+          </div>
+      </div>
+  )
+}

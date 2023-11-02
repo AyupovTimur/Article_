@@ -5,16 +5,16 @@ import ToggleThemeIcon from 'shared/assets/icons/theme_light_dark_icon.svg';
 import { Button, ButtonTheme } from 'shared/ui/Button/Button';
 
 interface ThemeSwitcherProps {
-    className?: string
+  className?: string
 }
 
-export const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
-    const { toggleTheme } = useThem()
-    return (
+export const ThemeSwitcher = ({ className }: ThemeSwitcherProps): JSX.Element => {
+  const { toggleTheme } = useThem()
+  return (
         <div className={classNames(cls.themeSwitcher, {}, [className])}>
             <Button theme={ButtonTheme.CLEAR} onClick={toggleTheme}>
                 <ToggleThemeIcon/>
             </Button>
         </div>
-    );
-};
+  )
+}

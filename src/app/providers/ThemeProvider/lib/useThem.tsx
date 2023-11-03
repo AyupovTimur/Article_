@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import { LOCAL_STORAGE_THEME_KEY, ThemeContext, Themes } from './ThemeContext'
 
 interface useThemResult {
-  theme: Themes
+  theme: Themes,
   toggleTheme: () => void
 }
 

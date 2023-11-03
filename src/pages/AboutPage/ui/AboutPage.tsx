@@ -1,12 +1,13 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from 'react-i18next'
 
 const AboutPage = (): JSX.Element => {
+
   const { t } = useTranslation('about')
 
   return (
-        <div>
-            <h1>{t('О сайте')}</h1>
-        </div>
+    <div>
+      <h1>{t('О сайте')}</h1>
+    </div>
   )
 }
 

@@ -5,10 +5,10 @@ import 'shared/lib/config/i18n/i18n';
 import createRoot from 'react-dom';
 
 createRoot.render(
-    <BrowserRouter>
-        <ThemeProvider>
-            <App />
-        </ThemeProvider>
-    </BrowserRouter>,
-    document.getElementById('root')
+  <BrowserRouter>
+    <ThemeProvider>
+      <App />
+    </ThemeProvider>
+  </BrowserRouter>,
+  document.getElementById('root')
 )
